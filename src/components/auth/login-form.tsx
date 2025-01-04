@@ -66,6 +66,7 @@ export function LoginForm() {
         router.push("/tasks");
       });
     } catch (error) {
+      console.error(error);
       toast.error("Something went wrong. Please try again.");
     }
   }
@@ -82,6 +83,7 @@ export function LoginForm() {
       toast.success("Check your email to confirm your account");
       signUpForm.reset();
     } catch (error) {
+      console.error(error);
       toast.error("Something went wrong. Please try again.");
     }
   }

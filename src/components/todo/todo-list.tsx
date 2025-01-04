@@ -35,7 +35,7 @@ export function TodoList({
       <TodoProgress todos={todos} />
       <CreateTodoForm userId={user?.id ?? ""} goals={goals} />
       {todos.map((todo) => (
-        <TodoItem key={todo.id} todo={todo} goals={goals} />
+        <TodoItem key={todo.id} todo={todo} />
       ))}
     </div>
   );

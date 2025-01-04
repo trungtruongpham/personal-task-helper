@@ -1,15 +1,14 @@
 import { Checkbox } from "@/components/ui/checkbox";
-import { type Todo, type Goal } from "@/types";
+import { type Todo } from "@/types";
 import { toggleTodo } from "@/lib/actions/todos";
 import { useTransition } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 interface TodoItemProps {
   todo: Todo;
-  goals: Goal[];
 }
 
-export function TodoItem({ todo, goals }: TodoItemProps) {
+export function TodoItem({ todo }: TodoItemProps) {
   const [isPending, startTransition] = useTransition();
   const { toast } = useToast();
 
